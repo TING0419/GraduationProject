@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="/static/CSS/fileArea.css?v=<?=time()?>">
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="fileContainer">
+            <h3>Upload your File</h3>
+            <input type="text" name="name">
+            <input type="file" name="image">
+            <input type="submit" value="Upload">
+            <div class="drag-area">
+                <h3>上傳檔案</h3>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="/static/JS/fileArea.js"></script>
+</body>
+</html>
