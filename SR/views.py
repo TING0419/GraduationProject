@@ -76,7 +76,7 @@ class SRView(APIView):
             ser = ImageSerializer(instance=image, many=False)
         else:
             return Response(serializer.errors)
-        image_path = "/home/tle/Desktop/Django/Project/Project/media" + ser.data['image']
+        image_path = "./media" + ser.data['image']
         lr_image = cv2.imread(image_path, cv2.IMREAD_UNCHANGED).astype(np.float32) / 255.0
         hr_image = cv2.imread(image_path, cv2.IMREAD_UNCHANGED).astype(np.float32) / 255.0
 

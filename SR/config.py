@@ -62,4 +62,4 @@ if mode == "test":
     lr_dir = f"./data/Set5/GTmod12"
     sr_dir = f"../results/test/{exp_name}"
     hr_dir = f"./data/Set5/GTmod12"
-    model_path = "/home/tle/Desktop/Django/Project/Project/models/srcnn_x3-T91-919a959c.pth.tar"
+    model_path = "./models/srcnn_x3-T91-919a959c.pth.tar"
